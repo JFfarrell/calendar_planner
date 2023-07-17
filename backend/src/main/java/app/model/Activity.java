@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 public class Activity {
     @Id
     @GeneratedValue
+    private int id;
     private String name;
     private String activity_type;
     private String date;
@@ -60,4 +61,7 @@ public class Activity {
         this.intensity = intensity;
     }
 
+    public int getId() {
+        return id;
+    }
 }
