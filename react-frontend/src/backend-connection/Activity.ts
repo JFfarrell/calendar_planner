@@ -7,5 +7,5 @@ interface Activity {
   intensity: string;
 }
 
-
+export const getActivities = "http://localhost:8080/activities"
 export default Activity;

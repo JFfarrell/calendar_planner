@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { schema } from "../Schemas";
+import { schema } from "../../Schemas";
 import SelectionDropdown from "./SelectionDropdown";
 
 type ExpenseFormData = z.infer<typeof schema>;

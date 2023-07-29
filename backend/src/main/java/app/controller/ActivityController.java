@@ -27,8 +27,8 @@ public class ActivityController {
         return "Greetings from Spring!";
     }
 
-    @GetMapping("/activities")
     @CrossOrigin(origins = "http://localhost:5173")
+    @GetMapping("/activities")
     public List<Activity> listActivities(Model model) {
         return activityRepository.findAll();
     }

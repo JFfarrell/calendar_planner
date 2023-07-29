@@ -1,9 +1,7 @@
-import Activity from "./Activity";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { object, transformer } from "zod";
-
-const activitiesApi = "http://localhost:8080/activities";
+import Activity, { getActivities } from "../Activity";
 
 const DataTable = () => {
   const [activities, setActivities] = useState<Activity[]>([]);
@@ -12,17 +10,19 @@ const DataTable = () => {
   const [columns, setColumns] = useState(Array<string>);
 
   useEffect(() => {
-    axios.get<Activity[]>(activitiesApi).then((res) => {
-      setActivityCount(res.data.length);
-      setColumns(
-        Object.keys(res.data[0])
-          .slice(1)
-          .map((word) => capitalizeFirstLetter(word))
-      );
-      console.log(columns);
-
-      setActivities(res.data.slice(activtyIncrement[0], activtyIncrement[1]));
-    });
+    try {
+      axios.get<Activity[]>(getActivities).then((res) => {
+        setActivityCount(res.data.length);
+        setColumns(
+          Object.keys(res.data[0])
+            .slice(1)
+            .map((word) => capitalizeFirstLetter(word))
+        );
+        setActivities(res.data.slice(activtyIncrement[0], activtyIncrement[1]));
+      });
+    } catch {
+      console.log("Cannot connect to backend.");
+    }
   }, [activtyIncrement]);
 
   const capitalizeFirstLetter = (word: string) => {
