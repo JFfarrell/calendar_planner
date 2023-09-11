@@ -7,14 +7,14 @@ function App() {
   return (
     <>
       <Calendar></Calendar>
-      <div className="alert alert-primary">
+      {/* <div className="alert alert-primary">
         <div className="mb-3">
           <DataTable></DataTable>
         </div>
         <div className="mp-5">
           <ActivityForm onSubmit={(data) => console.log(data)}></ActivityForm>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

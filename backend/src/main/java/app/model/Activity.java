@@ -10,7 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
 @Entity
-@Table(name="test")
+@Table(name="activities")
 public class Activity {
     @Id
     @GeneratedValue

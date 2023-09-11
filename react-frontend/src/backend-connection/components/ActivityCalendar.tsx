@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { addMonths, subMonths, format } from "date-fns";
 import { date } from "zod";
 import dayjs from "dayjs";
+import DenseTable from "./WeeklyCalendar";
 
 const ActivityCalendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
@@ -38,6 +39,7 @@ const ActivityCalendar = () => {
 
   return (
     <>
+    <div className="alert alert-primary">
       <div className="header row flex-middle">
         <div className="col col-start" onClick={prevMonth}>
           <div className="icon">chevron_left</div>
@@ -49,11 +51,14 @@ const ActivityCalendar = () => {
           <div className="icon">chevron_right</div>
         </div>
       </div>
+      <div><DenseTable></DenseTable></div>
+      
       {/* <div>
         <div>Header</div>
         <div>Days</div>
         <div>Cells</div>
       </div> */}
+      </div>
     </>
   );
 };

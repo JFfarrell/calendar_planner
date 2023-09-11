@@ -1,1 +1,7 @@
 react-frontend/node_modules
+backend/.gradle/
+backend/.idea/
+backend/build/
+backend/src/main/resources/
+react-frontend/package-lock.json
+react-frontend/package.json
