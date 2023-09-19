@@ -21,6 +21,32 @@ public class Activity {
     private Integer duration;
     private String intensity;
 
+    private String tod;
+
+    private String end_time;
+
+    private String dow;
+
+    public String getEnd_time() {
+        return end_time;
+    }
+
+    public void setEnd_time(String end_time) {
+        this.end_time = end_time;
+    }
+
+    public String getDow() {
+        return dow;
+    }
+
+    public String getTod() {
+        return tod;
+    }
+
+    public void setTod(String tod) {
+        this.tod = tod;
+    }
+
     public String getActivity_type() {
         return activity_type;
     }

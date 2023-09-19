@@ -3,6 +3,8 @@ import axios from "axios";
 import { object, transformer } from "zod";
 import Activity, { getActivities } from "../Activity";
 
+
+// potentially redundant table, review at later time
 const DataTable = () => {
   const [activities, setActivities] = useState<Activity[]>([]);
   const [activtyIncrement, setActivityIncrement] = useState<number[]>([0, 3]);
