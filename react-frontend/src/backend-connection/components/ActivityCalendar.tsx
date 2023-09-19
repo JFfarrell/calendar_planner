@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { addMonths, subMonths, format } from "date-fns";
 import { date } from "zod";
 import dayjs from "dayjs";
-import DenseTable from "./WeeklyCalendar";
+import DenseTable from "./WeeklyCalendar/WeeklyCalendar";
 
 const ActivityCalendar = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date());
