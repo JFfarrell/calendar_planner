@@ -21,11 +21,11 @@ public class Activity {
     private Integer duration;
     private String intensity;
 
-    private String tod;
+    private String time_of_day;
 
     private String end_time;
 
-    private String dow;
+    private String day_of_week;
 
     public String getEnd_time() {
         return end_time;
@@ -36,15 +36,15 @@ public class Activity {
     }
 
     public String getDow() {
-        return dow;
+        return day_of_week;
     }
 
     public String getTod() {
-        return tod;
+        return time_of_day;
     }
 
     public void setTod(String tod) {
-        this.tod = tod;
+        this.time_of_day = tod;
     }
 
     public String getActivity_type() {
